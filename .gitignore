@@ -1,5 +1,5 @@
+.env.local
 node_modules/
-.env
 build/
 no/
 .firebase/
