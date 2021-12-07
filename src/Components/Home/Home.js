@@ -34,15 +34,18 @@ const Home = () => {
     <>
       <Header></Header>
       <div className="w-2/4 mx-auto mt-8">
-        <h1 className="text-purple-600 text-6xl" sx={{ textAlign: "center" }}>
-          server side is working
+        <h1
+          className="mb-4 text-purple-600 text-6xl"
+          sx={{ textAlign: "center" }}
+        >
+          simple User info TODO
         </h1>
         <div className="mt-8">
           <Link
             className="rounded-md bg-green-600 hover:bg-green-500 text-gray-50 p-2"
             to="/adduser"
           >
-            add user
+            Add TODO
           </Link>
           <div>
             <div>
@@ -53,9 +56,9 @@ const Home = () => {
                 all users
               </p>
             </div>
-            <div className="text-left">
+            <div className="text-left grid grid-cols-2 gap-4">
               {user?.map((item) => (
-                <div className="mt-4 border-2 border-green-200">
+                <div className=" mt-4 border-2 border-green-200">
                   <div className="ml-2">
                     <Link
                       to={`/details/${item._id}`}
@@ -67,16 +70,16 @@ const Home = () => {
 
                     <h1>Name: {item.name}</h1>
                     <h6>Email: {item.email}</h6>
-                    <h6>Age: {item.age}</h6>
+                    <h6 className="mb-4">Age: {item.age}</h6>
                     <button
                       onClick={() => handleDelete(item._id)}
-                      className=" text-red-500 text-2xl"
+                      className=" text-red-500 text-2xl border-2 border-b-0 px-2 border-green-200 bg-green-50 hover:bg-white"
                     >
                       X
                     </button>
                     <Link
                       to={`/details/${item._id}`}
-                      className=" ml-4 text-yellow-600 text-2xl"
+                      className=" ml-4 text-yellow-600 text-2xl border-2 border-green-200 bg-green-50 hover:bg-white "
                     >
                       upadate
                     </Link>

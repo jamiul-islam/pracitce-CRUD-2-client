@@ -23,7 +23,7 @@ const Details = () => {
     <div>
       <Header></Header>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="text-green-700 text-7xl underline mt-8">Update user</h2>
+        <h2 className="text-green-700 text-7xl underline mt-8">Update TODO</h2>
         <div className="w-2/4 p-2 flex flex-col mx-auto">
           <input
             className="p-3 m-1 border-2  border-green-500"
